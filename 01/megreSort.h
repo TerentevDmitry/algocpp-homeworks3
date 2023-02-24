@@ -1,6 +1,7 @@
 #pragma once
+#include<iostream>
 
-void mergeSort(int* arr, int size);
+void mergeSortedArr(int* arr, const size_t arrSize, int* arrLeft, const size_t arrLeftSize, int* arrRight, const size_t arrRightSize);
 
-void mergeSortedArr(int* arr, int size);
 
+void mergeSort(int* arr, const size_t sizeArr);
