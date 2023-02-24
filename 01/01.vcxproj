@@ -128,6 +128,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="01.cpp" />
+    <ClCompile Include="megreSort.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="megreSort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
