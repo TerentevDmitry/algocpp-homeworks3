@@ -5,9 +5,9 @@
 #include "quickSort.h"
 
 //Функция печати массива
-void arrPrint(int* arr, const size_t arrSize)
+void arrPrint(int* arr, const int arrSize)
 {
-	for (size_t i = 0; i < arrSize; i++)
+	for (int i = 0; i < arrSize; i++)
 	{
 		std::cout << arr[i] << "\t";
 	};

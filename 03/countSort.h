@@ -2,4 +2,4 @@
 #include<iostream>
 #include<climits>
 
-void countSort(int* arr, const size_t arrSize);
+void countSort(int* arr, const int arrSize);

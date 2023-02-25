@@ -2,9 +2,9 @@
 
 
 //Функция слияния
-void mergeSortedArr(int* arr, const size_t arrSize, int* arrLeft, const size_t arrLeftSize, int* arrRight, const size_t arrRightSize)
+void mergeSortedArr(int* arr, const int arrSize, int* arrLeft, const int arrLeftSize, int* arrRight, const int arrRightSize)
 {
-	size_t iLeft = 0, iRight = 0, i = 0;
+	int iLeft = 0, iRight = 0, i = 0;
 
 	while (arrLeftSize > iLeft && arrRightSize > iRight)
 	{
@@ -28,31 +28,31 @@ void mergeSortedArr(int* arr, const size_t arrSize, int* arrLeft, const size_t a
 }
 
 //Функция сортировки слиянием
-void mergeSort(int* arr, const size_t arrSize)
+void mergeSort(int* arr, const int arrSize)
 {
 	if (arrSize <= 1)
 	{
 		return;
 	}
-	else if(arrSize == 2)
+	if(arrSize == 2)
 	{
 		if(arr[0] > arr[1])
 		std::swap(arr[0], arr[1]);
 		return;
 	}
-	else
-	{
-		size_t arrLeftSize = arrSize / 2;
-		size_t arrRightSize = arrSize - (arrSize / 2);
+	
+	
+	int arrLeftSize = arrSize / 2;
+	int arrRightSize = arrSize - (arrSize / 2);
 
 		int* arrLeft = new int[arrLeftSize];
 		int* arrRight = new int[arrRightSize];
 
-		for (size_t i = 0; i < arrLeftSize; i++)
+		for (int i = 0; i < arrLeftSize; i++)
 		{
 			arrLeft[i] = arr[i];
 		}
-		for (size_t i = 0; i < arrRightSize; i++)
+		for (int i = 0; i < arrRightSize; i++)
 		{
 			arrRight[i] = arr[i + arrLeftSize];
 		}
@@ -62,7 +62,11 @@ void mergeSort(int* arr, const size_t arrSize)
 
 
 		mergeSortedArr(arr, arrSize, arrLeft, arrLeftSize, arrRight, arrRightSize);
-	}
+	
 
 
+	delete[] arrLeft;
+	arrLeft = nullptr;
+	delete[] arrRight;
+	arrRight = nullptr;
 }
