@@ -44,8 +44,6 @@ void countSort(int* arr, const size_t arrSize)
 		arr[arrIndex++] = i;
 	};
 
-
-
-
 	delete[] arrForCount;
+	arrForCount = nullptr;
 };

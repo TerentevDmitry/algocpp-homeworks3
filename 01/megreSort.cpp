@@ -34,14 +34,14 @@ void mergeSort(int* arr, const size_t arrSize)
 	{
 		return;
 	}
-	else if(arrSize == 2)
+	if(arrSize == 2)
 	{
 		if(arr[0] > arr[1])
 		std::swap(arr[0], arr[1]);
 		return;
 	}
-	else
-	{
+	
+	
 		size_t arrLeftSize = arrSize / 2;
 		size_t arrRightSize = arrSize - (arrSize / 2);
 
@@ -62,7 +62,11 @@ void mergeSort(int* arr, const size_t arrSize)
 
 
 		mergeSortedArr(arr, arrSize, arrLeft, arrLeftSize, arrRight, arrRightSize);
-	}
+	
 
 
+	delete[] arrLeft;
+	arrLeft = nullptr;
+	delete[] arrRight;
+	arrRight = nullptr;
 }
